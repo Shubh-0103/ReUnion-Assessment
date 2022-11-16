@@ -110,7 +110,7 @@ export default function SearchFilter({ data, setFilteredData, location, setLocat
                             <p className="position-absolute bg-white fw-lighter" style={{ bottom: "-1px", right: "0px", fontSize: "0.8rem" }}>Min</p>
                             <input class="form-control pt-0 pb-0 d-inline-block" type="number" disabled={priceDisable} value={minPrice}
                                 onChange={(e) => {
-                                    setMinPrice(parseFloat(e.target.value <= maxPrice ? e.target.value : minPrice));
+                                    setMinPrice(parseFloat(e.target.value));
                                 }
                                 } />
 
@@ -119,7 +119,7 @@ export default function SearchFilter({ data, setFilteredData, location, setLocat
                             <p className="position-absolute bg-white fw-lighter" style={{ bottom: "-1px", right: "0px", fontSize: "0.8rem" }}>Max</p>
 
                             <input class="form-control pt-0 pb-0 d-inline-block" type="number" disabled={priceDisable} value={maxPrice} onChange={(e) => {
-                                setMaxPrice(parseFloat(e.target.value >= minPrice ? e.target.value : maxPrice))
+                                setMaxPrice(parseFloat(e.target.value))
                             }
                             }
                             />
