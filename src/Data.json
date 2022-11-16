@@ -1,0 +1,26 @@
+[
+    {
+        "img":"https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "location":"New Delhi",
+        "address":"Halo Stars Estate, Rajendra Nagar",
+        "price":30000,
+        "availability":"11/11/2022",
+        "type":"House"
+    },
+    {
+        "img":"https://img.staticmb.com/mbcontent//images/uploads/2021/7/flat-vs-independent-house.jpg",
+        "location":"Bangalore",
+        "address":"Near Wells Fargo Office",
+        "price":20000,
+        "availability":"11/12/2022",
+        "type":"Flat"
+    },
+    {
+        "img":"https://content3.jdmagicbox.com/comp/ahmedabad/s8/079pxx79.xx79.170901092656.w2s8/catalogue/seema-hall-satellite-ahmedabad-banquet-halls-d063q2zasg.jpg?clr=1c4a1c",
+        "location":"Kolkata",
+        "address":"Kali ghati, 4th Avenue",
+        "price":60000,
+        "availability":"12/1/2022",
+        "type":"Hall"
+    }
+]
