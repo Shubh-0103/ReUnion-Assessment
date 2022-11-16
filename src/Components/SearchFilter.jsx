@@ -18,7 +18,8 @@ export default function SearchFilter({ data, setFilteredData, location, setLocat
 
     // Apply filter according to different inputs
     const applyFilterHandle = () => {
-
+        if (minPrice > maxPrice)
+            return window.alert("Min Price always less than equal to Max Price")
         let filteredData = data.filter(val => {
             let locationFilter = false, dateFilter = true, priceFilter = true, typeFilter = true;
             // if location is in input then check properties in those locations
@@ -110,8 +111,6 @@ export default function SearchFilter({ data, setFilteredData, location, setLocat
                             <input class="form-control pt-0 pb-0 d-inline-block" type="number" disabled={priceDisable} value={minPrice}
                                 onChange={(e) => {
                                     setMinPrice(parseFloat(e.target.value <= maxPrice ? e.target.value : minPrice));
-                                    if (parseFloat(e.target.value) > maxPrice)
-                                        window.alert("Min Price always less than equal to Max Price")
                                 }
                                 } />
 
@@ -120,8 +119,6 @@ export default function SearchFilter({ data, setFilteredData, location, setLocat
                             <p className="position-absolute bg-white fw-lighter" style={{ bottom: "-1px", right: "0px", fontSize: "0.8rem" }}>Max</p>
 
                             <input class="form-control pt-0 pb-0 d-inline-block" type="number" disabled={priceDisable} value={maxPrice} onChange={(e) => {
-                                if (parseFloat(e.target.value) < minPrice)
-                                    window.alert("Min Price always less than equal to Max Price")
                                 setMaxPrice(parseFloat(e.target.value >= minPrice ? e.target.value : maxPrice))
                             }
                             }
